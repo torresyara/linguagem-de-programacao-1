@@ -1,24 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () {
+int main(){
 	
-	int v[10], i=0, menor=3952, maior=0;
-	
-	while (i<=9){
-		printf("Digite o valor do vetor, na posicao %d: ", i+1);
-		scanf("%d", &v[i]);
-		if (v[i]>maior){
-			maior = v[i];
+	int vet[10], i, menor, maior;
+
+	for(i=0;i<=9;i++){
+		printf("Escreva o numero da posicao %d: ", i+1);
+		scanf("%d",&vet[i]);
 	}
-		if (v[i]<menor){
-			menor = v[i];
-		}
-		i++;
+	
+	maior = vet[0];
+	menor = vet[0];
+	
+	for(i=0;i<=9;i++){
+		if (vet[i]> maior)
+			maior = vet[i];
+		else if (vet[i]<menor)
+			menor = vet[i];
 	}
 	
 	printf("O maior valor = %d\n", maior);
 	printf("O menor valor = %d\n", menor);
-
-	system("pause");
+	
+	
+system ("pause");
 }
